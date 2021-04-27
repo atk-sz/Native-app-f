@@ -63,7 +63,7 @@ const HomeScreen = ({ navigation, route }) => {
     }
   }
 
-  if(data){
+  if (data) {
     // data.map(category => (console.log(category.data.articles[0].publishedAt)))
     // data.map(category => (console.log(category.data.articles)))
     // console.log("brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr")
@@ -71,10 +71,10 @@ const HomeScreen = ({ navigation, route }) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <View style={{borderBottomColor:'black', borderBottomWidth:1}}>
+        <View style={styles.search}>
           <SearchCategory value={value} onChangeText={onChangeText} onSearch={onSearch} />
         </View>
-        
+
         {
           // (data)?(<FlatList
           //   data={data}
@@ -90,6 +90,9 @@ const HomeScreen = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  search: {
+    borderBottomColor: 'black', borderBottomWidth: 1
   }
 });
 
